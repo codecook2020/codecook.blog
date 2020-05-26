@@ -13,7 +13,7 @@ class Bio extends React.Component {
       >
         <img
           src={profilePic}
-          alt={`Dan Abramov`}
+          alt={`luz`}
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
@@ -22,10 +22,12 @@ class Bio extends React.Component {
             borderRadius: "50%"
           }}
         />
-        <p style={{ maxWidth: 310 }}>
-          Personal blog by{" "}
-          <a href="https://mobile.twitter.com/dan_abramov">Dan Abramov</a>.{" "}
-          I&nbsp;explain with words and code.
+
+        <p style={{ maxWidth: 510 }}>
+          喜爱deno，rust,喜欢一切酷事物, 擅长javascript + python的全栈开发者。{" "}
+          {/* <a href="https://mobile.twitter.com/dan_abramov">Dan Abramov</a>.{" "} */}
+          &nbsp; Try making better life for the World By my code, not just
+          chinese, I am earthman.
         </p>
       </div>
     );

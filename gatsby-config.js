@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Overreacted",
-    author: "Dan Abramov",
-    description: "Personal blog by Dan Abramov. I explain with words and code.",
+    title: "CodeCook",
+    author: "luz",
+    description: "make better life for world by my code.",
     siteUrl: "https://overreacted.io",
     social: {
       twitter: "@dan_abramov"
@@ -106,7 +106,7 @@ module.exports = {
                 allMarkdownRemark(
                   limit: 1000,
                   sort: { order: DESC, fields: [frontmatter___date] }
-                  filter: {fields: { langKey: {eq: "en"}}}
+                  filter: {fields: { langKey: {eq: "zh-hans"}}}
                 ) {
                   edges {
                     node {
@@ -145,7 +145,7 @@ module.exports = {
             }
             allMarkdownRemark(
               sort: { fields: frontmatter___date, order: ASC },
-              filter: { fields: { langKey: { eq: "en" } } }
+              filter: { fields: { langKey: { eq: "zh-hans" } } }
             ) {
               edges {
                 node {
@@ -185,7 +185,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-i18n",
       options: {
-        langKeyDefault: "en",
+        langKeyDefault: "zh-hans",
         useLangKeyLayout: false
       }
     },
