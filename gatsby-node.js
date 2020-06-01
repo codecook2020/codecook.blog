@@ -34,6 +34,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create index pages for all supported languages
     Object.keys(supportedLanguages).forEach(langKey => {
+      console.log("langKey", langKey);
       createPage({
         path: langKey === "zh-hans" ? "/" : `/${langKey}/`,
         component: path.resolve("./src/templates/blog-index.js"),

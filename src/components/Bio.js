@@ -1,5 +1,5 @@
 import React from "react";
-import profilePic from "../assets/profile-pic.jpg";
+import profilePic from "../assets/batman.png";
 import { rhythm } from "../utils/typography";
 
 class Bio extends React.Component {
@@ -24,8 +24,8 @@ class Bio extends React.Component {
         />
 
         <p style={{ maxWidth: 510 }}>
-          喜爱deno，rust,喜欢一切酷事物, 擅长javascript + python的全栈开发者。{" "}
-          {/* <a href="https://mobile.twitter.com/dan_abramov">Dan Abramov</a>.{" "} */}
+          喜爱deno，rust,喜欢一切酷事物, 日常javascript + python的全栈开发者。{" "}
+          {/* <a href="https://mobile.twitter.com/dan_abramov">codecook</a>.{" "} */}
           &nbsp; Try making better life for the World By my code, not just
           chinese, I am earthman.
         </p>

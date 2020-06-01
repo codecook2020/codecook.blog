@@ -18,7 +18,7 @@ import {
 } from "../utils/i18n";
 
 const GITHUB_USERNAME = "gaearon";
-const GITHUB_REPO_NAME = "overreacted.io";
+const GITHUB_REPO_NAME = "codecook.io";
 const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif`;
@@ -68,7 +68,8 @@ class Translations extends React.Component {
               ))}
             </span>
           )}
-          {lang !== "en" && (
+
+          {/* {lang !== "en" && (
             <>
               <br />
               <br />
@@ -84,7 +85,7 @@ class Translations extends React.Component {
               )}
               <Link to={`/${lang}`}>View all translated posts</Link>{" "}
             </>
-          )}
+          )} */}
         </Panel>
       </div>
     );
@@ -137,7 +138,7 @@ class BlogPostTemplate extends React.Component {
       enSlug.length - 1
     )}/index${lang === "en" ? "" : "." + lang}.md`;
     const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
-      `https://overreacted.io${enSlug}`
+      `https://codecook.io${enSlug}`
     )}`;
 
     return (
@@ -175,7 +176,8 @@ class BlogPostTemplate extends React.Component {
               )}
             </header>
             <div dangerouslySetInnerHTML={{ __html: html }} />
-            <footer>
+
+            {/* <footer>
               <p>
                 <a href={discussUrl} target="_blank" rel="noopener noreferrer">
                   Discuss on Twitter
@@ -185,7 +187,7 @@ class BlogPostTemplate extends React.Component {
                   Edit on GitHub
                 </a>
               </p>
-            </footer>
+            </footer> */}
           </article>
         </main>
         <aside>
@@ -195,7 +197,7 @@ class BlogPostTemplate extends React.Component {
               fontFamily: systemFont
             }}
           >
-            <Signup cta={post.frontmatter.cta} />
+            {/* <Signup cta={post.frontmatter.cta} /> */}
           </div>
           <h3
             style={{
@@ -211,7 +213,7 @@ class BlogPostTemplate extends React.Component {
               }}
               to={"/"}
             >
-              Overreacted
+              codecook
             </Link>
           </h3>
           <Bio />

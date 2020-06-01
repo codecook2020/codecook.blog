@@ -3,9 +3,9 @@ module.exports = {
     title: "CodeCook",
     author: "luz",
     description: "make better life for world by my code.",
-    siteUrl: "https://overreacted.io",
+    siteUrl: "https://codecook.io",
     social: {
-      twitter: "@dan_abramov"
+      // twitter: "@dan_abramov"
     }
   },
   pathPrefix: "/",
@@ -17,6 +17,13 @@ module.exports = {
         name: "pages"
       }
     },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/markdown`,
+    //     name: "data"
+    //   }
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -80,12 +87,11 @@ module.exports = {
               return allMarkdownRemark.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at overreacted.io. You can read it online by <a href="${siteUrl +
+                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at codecook.io. You can read it online by <a href="${siteUrl +
                   edge.node.fields.slug}">clicking here</a>.)</div>
               `;
 
                 let html = edge.node.html;
-                // Hacky workaround for https://github.com/gaearon/overreacted.io/issues/65
                 html = html
                   .replace(/href="\//g, `href="${siteUrl}/`)
                   .replace(/src="\//g, `src="${siteUrl}/`)
@@ -126,7 +132,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Dan Abramov's Overreacted Blog RSS Feed"
+            title: "codecook's Blog RSS Feed"
           }
         ]
       }
@@ -134,7 +140,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-ebook`,
       options: {
-        filename: "overreacted-ebook.epub",
+        filename: "codecook-ebook.epub",
         query: `
           {
             site {
@@ -165,8 +171,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Overreacted`,
-        short_name: `Overreacted`,
+        name: `codecook`,
+        short_name: `codecook`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,
